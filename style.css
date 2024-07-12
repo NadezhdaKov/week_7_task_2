@@ -1,0 +1,235 @@
+@font-face {
+    font-family: 'GraphikLCGLight';
+    src: url(./assets/GraphikLCGLight.ttf);
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'GraphikLCGMedium';
+    src: url(./assets/GraphikLCGMedium.ttf);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GraphikLCGRegular';
+    src: url(./assets/GraphikLCGRegular.ttf);
+    font-style: normal;
+}
+
+html {
+    min-width: 430px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+header > img {
+    height: 60%;
+
+}
+
+nav {
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_button {
+    height: 27px;
+}
+
+.header_button > button {
+    width: 192px;
+    height: 100%;
+    border-radius: 20px;
+    background-color: white;
+    border-color: rgb(58, 133, 244);
+    /*шрифт и его цвет*/
+    font-family: 'GraphikLCGRegular';
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(58, 133, 244);
+}
+
+ul {
+    list-style: none;
+    width: 80%;
+}
+
+li {
+    display: inline;
+    margin-left: 5%;
+    /*шрифт и его цвет*/
+    font-family: 'GraphikLCGRegular';
+    font-size: 18px;
+    color: rgb(87, 87, 86);
+}
+
+.article_main {
+    display: flex;
+    justify-content: center;
+    background: -webkit-linear-gradient(90deg, #cce7ff,#c9d2f8,#c9d2f8,#9eb5ee);/* Chrome 10-25, Safari 5.1-6 */                          background: linear-gradient(90deg, #cce7ff,#c9d2f8,#c9d2f8,#9eb5ee);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+}
+
+.article_main_text  {
+    width: 40%;
+    height: 80%;
+    align-self: center;
+}
+
+.article_main_text > h1 {
+    font-family: 'GraphikLCGMedium';
+    font-size: 50px;
+    color: rgb(47, 47, 47);
+}
+
+.article_main_text > p {
+    margin: 0;
+    font-family: 'GraphikLCGRegular';
+    font-size: 20px;
+    color: rgb(47, 47, 47);
+}
+
+.article_main_botton {
+    margin-top: 5%;
+    margin-bottom: 30px;
+    height: 50px;
+}
+
+.article_main_botton button {
+    width: 265px;
+    height: 100%;
+    border-radius: 40px;
+    background-color: rgb(58, 133, 244);
+    border: none;
+    /*шрифт и его цвет*/
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+}
+
+.article_main_botton button:hover {
+    background-color: white;
+    border: rgb(58, 133, 244);
+    color: rgb(58, 133, 244);
+    box-shadow: 0 8px 15px rgba(44, 128, 255, 0.2); 
+}
+
+.article_main_img {
+    width: 50%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.article_main_img > img {
+    width: 100%;
+    height: 100%;
+}
+
+.article_aside {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 5%;
+
+}
+
+.article_aside h2 {
+    flex-basis: 100%;
+    text-align: center;
+    /*шрифт*/
+    font-family: 'GraphikLCGRegular';
+    font-size: 26px;
+    font-weight: bold;
+    color: rgb(56, 56, 56);
+}
+
+picture::after {
+    content: "";
+    background-image: url(./assets/coolicon.svg);
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+}
+
+.article_aside_1,
+.article_aside_2,
+.article_aside_3,
+.article_aside_4 {
+    position: relative;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    /*шрифт*/
+    color: rgb(47, 47, 47);
+    font-family: 'GraphikLCGRegular';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+@media screen and (max-width: 780px)  {
+    ul {
+        display: none;
+    }
+    
+    .header_button {
+        padding-left: 50%;
+    }
+
+    .article_main_text > h1 {
+        font-size: 28px;
+    }
+
+    .article_main_text > p {
+        font-size: 14px;
+    }
+
+    .article_aside h2 {
+        /*шрифт*/
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .article_main {
+        flex-direction: column;
+    }
+
+    .article_main_text {
+        width: 80%;
+    }
+
+    .article_main_img {
+        align-self: self-end;
+    }
+
+    .header_button {
+        padding-left: 50%;
+    }
+
+    .article_main_botton button {
+        width: 200px;
+        /*шрифт и его цвет*/
+        font-size: 15px;
+    }
+    
+    .header_button > button {
+        width: 100px;
+        height: 40px;
+    } 
+}
